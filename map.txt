@@ -1,0 +1,4 @@
+flag1.txt
+flag2.txt
+flag3.txt
+flag4.txt
