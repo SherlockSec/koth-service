@@ -26,5 +26,5 @@ env GOOS=linux GOARCH=amd64 go build .
 
 ### Credits
 
-[NinjaJc01](https://github.com/NinjaJc01), for the base `http.serve` code for Port 9999  
-[TryHackMe](https://tryhackme.com), for actually making the gamemode and implementing this on the backend  
+ - [NinjaJc01](https://github.com/NinjaJc01), for the base `http.serve` code for Port 9999  
+ - [TryHackMe](https://tryhackme.com), for actually making the gamemode and implementing this on the backend  
