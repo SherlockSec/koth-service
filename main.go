@@ -6,9 +6,9 @@ import(
 
 //Constants
 const kingPath = "king.txt" // Path to king file
-const mapPath = "map.txt" // Path to map file
-const flags = 4 // amount of flags
-var delCheck = false // Initial assignment of the /api/delete check bool
+const mapPath = "map.txt"   // Path to map file
+const flags = 4             // amount of flags
+var isMapDeleted = false    // Initial assignment of the /api/delete check bool
 
 func main() {
 
