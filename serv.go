@@ -1,8 +1,7 @@
 package main
 
-import(
+import (
 	"net/http"
-	"fmt"
 )
 
 func serv() {
@@ -33,7 +32,7 @@ func returnFlags(w http.ResponseWriter, r *http.Request) {
 	case "GET":	// GET - returns flag.txt
 		w.Write(readKing())
 	case "POST": // POST - If /api/delete hasn't been run yet, supply flags as JSON, if /api/delete has been run, "Status Not Implemented" response.
-		if delCheck != false {
+		if isMapDeleted == true {
 
 			w.WriteHeader(http.StatusNotImplemented)
 			w.Write([]byte(http.StatusText(http.StatusNotImplemented) + "\n"))
@@ -62,13 +61,11 @@ func handleDelete(w http.ResponseWriter, r *http.Request) {
 	case "GET":
 		w.Write(readKing())
 	case "POST":
-		if delCheck != false {
+		if isMapDeleted == true {
 			w.WriteHeader(http.StatusNotImplemented)
 			w.Write([]byte(http.StatusText(http.StatusNotImplemented) + "\n"))
 			break
-		}
-
-		if delCheck == true {
+		} else {
 
 			statusChan := make(chan bool) // Opens response channel
 

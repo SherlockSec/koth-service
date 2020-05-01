@@ -108,10 +108,10 @@ func deleteMap(channel chan<- bool) { // Function that deletes the map file on /
 	err := os.Remove(mapPath)
 	if err != nil {
 		fmt.Println(err)
-		channel <- delCheck
+		channel <- isMapDeleted
 	}
 
-	delCheck = true
-	channel <- delCheck
+	isMapDeleted = true
+	channel <- isMapDeleted
 
 }
