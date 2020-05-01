@@ -37,7 +37,7 @@ func getFlagArray(channel chan<- []string) { // Returns flag array to the /api/g
 func generateFlags(amount int, channel chan<- []string) {
 
 	hasher := md5.New() // Setup MD5 hasher
-	rand.Seed(time.Now().UnixNano() // Set the seed for the random strings 
+	rand.Seed(time.Now().UnixNano()) // Set the seed for the random strings
 	var flags []string // Initialize flags slice
 
 	for i := 1; i <= amount; i++ {
